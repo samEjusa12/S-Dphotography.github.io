@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | S&D Photography</title>
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('sd-theme');
+        var theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }());
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">S<span class="brand-ampersand">&amp;</span>D</div>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li class="nav-item nav-dropdown">
+          <button
+            class="nav-link nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="services-dropdown-menu"
+          >
+            Services
+          </button>
+          <ul class="dropdown-menu" id="services-dropdown-menu">
+            <li><a class="dropdown-item" href="index.html#services">All Services</a></li>
+            <li><a class="dropdown-item" href="wedding.html">Wedding &amp; Engagement</a></li>
+            <li><a class="dropdown-item" href="portrait.html">Portrait</a></li>
+            <li><a class="dropdown-item" href="family.html">Family</a></li>
+            <li><a class="dropdown-item" href="events.html">Events &amp; Commercial</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="about-editorial-hero">
+      <div class="about-grid-pattern" aria-hidden="true"></div>
+      <div class="about-hero-orb" aria-hidden="true"></div>
+      <div class="about-shell about-hero-grid">
+        <div class="about-hero-copy">
+          <p class="about-eyebrow">About S&amp;D Photography</p>
+          <h1>We create photographs that feel lived in, elegant, and true.</h1>
+          <p class="about-lead">S&amp;D Photography is built around the belief that the best images are never forced. We direct with intention, watch for the in-between moments, and craft galleries that feel polished without losing the emotion that made them worth capturing.</p>
+          <p>From weddings and engagements to portraits, family sessions, and event coverage, our approach stays the same: calm guidance, thoughtful composition, and imagery that still feels honest years later.</p>
+          <div class="about-hero-actions">
+            <a href="contact.html" class="btn btn-primary">Book a Session</a>
+            <a href="index.html#portfolio" class="btn btn-secondary">View Portfolio</a>
+          </div>
+        </div>
+        <div class="about-hero-collage" aria-label="Selected photography highlights">
+          <figure class="about-collage-card about-collage-tall">
+            <img src="Aboutus/Aboutus1.jpg" alt="Bride photographed against a stone wall">
+          </figure>
+          <div class="about-collage-stack">
+            <figure class="about-collage-card">
+              <img src="Wedding&Engagement/Wedding&Engagement12.jpg" alt="Wedding couple portrait during golden hour">
+            </figure>
+            <figure class="about-collage-card">
+              <img src="Portrait/Portrait7.jpg" alt="Portrait session with soft natural light">
+            </figure>
+          </div>
+          <div class="about-collage-stack about-collage-offset">
+            <figure class="about-collage-card">
+              <img src="Family/Family4.jpg" alt="Family sharing a candid moment outdoors">
+            </figure>
+            <figure class="about-collage-card">
+              <img src="Portfolio/Portfolio6.jpg" alt="Behind-the-scenes photography detail">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-mission-section">
+      <div class="about-shell">
+        <div class="about-section-intro">
+          <p class="about-section-label">Our mission</p>
+          <h2>Turn important days and ordinary moments into work you will still want on your walls years from now.</h2>
+        </div>
+        <div class="about-mission-grid">
+          <div class="about-mission-copy">
+            <p>We design every session to feel clear and easy from the first enquiry to final delivery. That means helping with locations, shaping timelines that protect the light, and giving enough direction for you to feel confident without making the experience feel staged.</p>
+            <p>Our editing style stays clean, warm, and timeless. We care about the emotional weight of an image just as much as the technical side, so the finished gallery feels cohesive, elevated, and personal to the people in it.</p>
+          </div>
+          <dl class="about-stat-grid">
+            <div class="about-stat-card">
+              <dt>Years refining the craft</dt>
+              <dd>8+</dd>
+            </div>
+            <div class="about-stat-card">
+              <dt>Sessions and celebrations photographed</dt>
+              <dd>150+</dd>
+            </div>
+            <div class="about-stat-card">
+              <dt>Average gallery delivery window</dt>
+              <dd>2 weeks</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-feature-banner">
+      <div class="about-shell">
+        <div class="about-banner-frame">
+          <img src="Wedding&Engagement/Wedding&Engagement4.jpg" alt="Wedding portrait captured by S&amp;D Photography">
+        </div>
+      </div>
+    </section>
+
+    <section class="about-values-section">
+      <div class="about-shell">
+        <div class="about-section-intro about-section-intro-centered">
+          <p class="about-section-label">Our values</p>
+          <h2>What shapes every session, gallery, and client experience.</h2>
+          <p class="about-section-text">The work only feels premium when the experience does too. These principles guide how we photograph, communicate, and deliver.</p>
+        </div>
+        <div class="about-values-grid">
+          <article class="about-value-card">
+            <h3>Intentional direction</h3>
+            <p>We give clear guidance when needed, then step back so the moments still feel natural and unforced.</p>
+          </article>
+          <article class="about-value-card">
+            <h3>Emotion first</h3>
+            <p>The small expressions, glances, and gestures matter as much as the big hero frames.</p>
+          </article>
+          <article class="about-value-card">
+            <h3>Timeless editing</h3>
+            <p>Clean colour, balanced contrast, and refined skin tones keep the work elegant long after trends move on.</p>
+          </article>
+          <article class="about-value-card">
+            <h3>Calm presence</h3>
+            <p>We keep the experience organised and relaxed so you can stay present in front of the camera.</p>
+          </article>
+          <article class="about-value-card">
+            <h3>Details that matter</h3>
+            <p>From fabric and florals to venue atmosphere and family interactions, the supporting frames complete the story.</p>
+          </article>
+          <article class="about-value-card">
+            <h3>Thoughtful delivery</h3>
+            <p>Every gallery is curated to flow well, feel cohesive, and give you images that are easy to revisit and share.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-process-section">
+      <div class="about-shell">
+        <div class="about-section-intro">
+          <p class="about-section-label">Our process</p>
+          <h2>A simple process built to keep the experience personal and professional.</h2>
+        </div>
+        <div class="about-process-grid">
+          <article class="about-process-card">
+            <img src="Portfolio/Portfolio2.jpg" alt="Camera equipment prepared for a photo session">
+            <div class="about-process-copy">
+              <h3>Plan with purpose</h3>
+              <p>We start with your vision, location ideas, timeline needs, and the atmosphere you want the photos to hold.</p>
+            </div>
+          </article>
+          <article class="about-process-card">
+            <img src="Portrait/Portrait3.jpg" alt="Portrait session in progress">
+            <div class="about-process-copy">
+              <h3>Photograph with intention</h3>
+              <p>During the session we balance guided portraits with room for spontaneous interactions and genuine reactions.</p>
+            </div>
+          </article>
+          <article class="about-process-card">
+            <img src="Portfolio/Portfolio5.jpg" alt="Editing and reviewing images after a session">
+            <div class="about-process-copy">
+              <h3>Deliver with care</h3>
+              <p>We refine the final gallery so it feels polished, consistent, and ready to print, share, and revisit.</p>
+            </div>
+          </article>
+        </div>
+        <div class="about-cta-row">
+          <a href="contact.html" class="btn btn-primary">Start Your Enquiry</a>
+          <a href="index.html#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+ <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+        <div class="footer-logo">S&amp;D</div>
+        <p>Elegant, timeless photography for every occasion.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer Quick Links">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+        <nav class="footer-services" aria-label="Footer Services Links">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="wedding.html">Wedding</a></li>
+            <li><a href="portrait.html">Portrait</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="events&commercial.html">Events</a></li>
+        </ul>
+    </nav>
+        <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+        <li>Email: <a class="footer-contact-info" href="mailto:info@sdphotography.com">info@sdphotography.com</a></li>
+        <li>Phone: <a class="footer-contact-info" href="tel:+1234567890">+1 234 567 890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 S&amp;D Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

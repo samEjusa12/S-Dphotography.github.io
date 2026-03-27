@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait | S&D Photography</title>
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('sd-theme');
+        var theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }());
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">S<span class="brand-ampersand">&amp;</span>D</div>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-item nav-dropdown">
+          <button
+            class="nav-link nav-dropdown-toggle active"
+            type="button"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="services-dropdown-menu"
+          >
+            Services
+          </button>
+          <ul class="dropdown-menu" id="services-dropdown-menu">
+            <li><a class="dropdown-item" href="index.html#services">All Services</a></li>
+            <li><a class="dropdown-item" href="wedding.html">Wedding &amp; Engagement</a></li>
+            <li><a class="dropdown-item" href="portrait.html">Portrait</a></li>
+            <li><a class="dropdown-item" href="family.html">Family</a></li>
+            <li><a class="dropdown-item" href="events.html">Events &amp; Commercial</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="story-showcase">
+      <div class="story-shell">
+        <h1 class="story-page-title">Portrait Sessions</h1>
+        <div class="story-panel">
+          <div class="story-image">
+            <img src="Portrait/Portrait1.jpg" alt="Portrait photography session">
+          </div>
+          <div class="story-copy">
+            <h2>Portraits with presence</h2>
+            <p>Portrait sessions are crafted to feel refined, expressive, and deeply personal, highlighting who you are with natural confidence and style.</p>
+            <p>Whether you prefer something editorial, classic, or relaxed, we shape the session around your personality and the atmosphere you want to create.</p>
+            <p>Every frame is guided with intention so the final collection feels polished, flattering, and unmistakably you.</p>
+            <a href="contact.html" class="btn btn-primary">Book now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-gallery-section">
+      <div class="story-shell">
+        <div class="story-gallery-header">
+          <h2>Portrait inspiration</h2>
+          <p>From soft natural light to bold close-ups, these images reflect the polished and expressive portrait style we bring to each session.</p>
+        </div>
+        <div class="story-gallery-grid">
+          <img src="Portrait/Portrait2.jpg" alt="Studio portrait composition">
+          <img src="Portrait/Portrait3.jpg" alt="Outdoor portrait framing">
+          <img src="Portrait/Portrait4.jpg" alt="Creative portrait lighting">
+          <img src="Portrait/Portrait5.jpg" alt="Classic portrait pose">
+          <img src="Portrait/Portrait6.jpg" alt="Portrait detail image">
+        </div>
+        <div class="story-cta-row">
+          <a href="contact.html" class="btn btn-primary">Book now</a>
+          <a href="index.html#services" class="btn btn-secondary">Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+        <div class="footer-logo">S&amp;D</div>
+        <p>Elegant, timeless photography for every occasion.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer Quick Links">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+        <nav class="footer-services" aria-label="Footer Services Links">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="wedding.html">Wedding</a></li>
+            <li><a href="portrait.html">Portrait</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="events&commercial.html">Events</a></li>
+        </ul>
+    </nav>
+        <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+        <li>Email: <a class="footer-contact-info" href="mailto:info@sdphotography.com">info@sdphotography.com</a></li>
+        <li>Phone: <a class="footer-contact-info" href="tel:+1234567890">+1 234 567 890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 S&amp;D Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
