@@ -142,6 +142,39 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.nav-links a[href="index.html' + hash + '"]');
   }
 
+  function clearActiveNavState() {
+    navItems.forEach(link => link.classList.remove('active'));
+    navDropdownToggle?.classList.remove('active');
+  }
+
+  function setVisibleActiveNav(sectionId) {
+    const homeLink = document.querySelector('.nav-links a[href="index.html"]');
+
+    clearActiveNavState();
+
+    if (sectionId === 'services') {
+      navDropdownToggle?.classList.add('active');
+      return;
+    }
+
+    if (sectionId === 'home' || sectionId === 'portfolio') {
+      homeLink?.classList.add('active');
+      return;
+    }
+
+    const activeLink = findNavLinkByHash('#' + sectionId);
+    if (activeLink) {
+      activeLink.classList.add('active');
+
+      if (activeLink.classList.contains('dropdown-item')) {
+        navDropdownToggle?.classList.add('active');
+      }
+      return;
+    }
+
+    homeLink?.classList.add('active');
+  }
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-links a');
@@ -150,19 +183,15 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    navItems.forEach(link => link.classList.remove('active'));
     if (window.scrollY < 100) {
-      const homeLink = document.querySelector('.nav-links a[href="index.html"]');
-      if (homeLink) homeLink.classList.add('active');
+      setVisibleActiveNav('home');
       return;
     }
 
     let index = sections.length;
     while (--index && window.scrollY + 80 < sections[index].offsetTop) {}
     if (sections[index]) {
-      const id = '#' + sections[index].id;
-      const activeLink = findNavLinkByHash(id);
-      if (activeLink) activeLink.classList.add('active');
+      setVisibleActiveNav(sections[index].id);
     }
   }
   if (isHomePage && sections.length > 0) {
@@ -181,8 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
           closeNavMenu();
-          navItems.forEach(item => item.classList.remove('active'));
-          link.classList.add('active');
+          setVisibleActiveNav('home');
           return;
         }
         const target = document.querySelector(hash);
@@ -192,14 +220,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
         closeNavMenu();
-        navItems.forEach(item => item.classList.remove('active'));
-        link.classList.add('active');
+        setVisibleActiveNav(target.id);
       } else if (href === 'index.html' && isHomePage) {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         closeNavMenu();
-        navItems.forEach(item => item.classList.remove('active'));
-        link.classList.add('active');
+        setVisibleActiveNav('home');
       }
     });
   });
