@@ -1637,6 +1637,10 @@ body[data-theme='dark'] .portfolio-accordion .accordion-button:not(.collapsed) {
   background: linear-gradient(135deg, rgba(201,166,70,0.3), rgba(35,35,31,1));
 }
 
+body[data-theme='dark'] .portfolio-accordion .accordion-button::after {
+  filter: invert(1) sepia(1) saturate(2.2) hue-rotate(355deg);
+}
+
 body[data-theme='dark'] .services {
   background:
     linear-gradient(180deg, rgba(26,25,22,0.88) 0%, rgba(17,17,15,0.82) 100%);
